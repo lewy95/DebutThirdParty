@@ -7,7 +7,7 @@ s.connect(('127.0.0.1', 9090))
 # 打印从服务器接收到的信息（WELCOME）
 print(s.recv(1).decode())  # W
 print(s.recv(1).decode())  # E
-print(s.recv(1024).decode())  # LCOME 不会阻塞，但缓冲区已经为空，存在预支消费，预支了 1 个字节
+print(s.recv(1024).decode())  # LCOME 不会阻塞，但缓冲区已经为空，存在预支消费
 print(s.recv(1).decode())  # 再次recv是产生阻塞，并且无法给服务端发送消b'\x00a\x00\x00\'u\x00\x00\n\x06b1425d\x12\x0511101\x1a\x0cymyylysyqllt"\x0e192.168.88.111*,/+wn24WH+fzLg2SOfWp6HB0OuyCSL9pzJs8dW69msg8='息
 # 那么如何能直接返回：
 # 法一：设置非阻塞
