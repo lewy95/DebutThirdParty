@@ -7,7 +7,7 @@ s.connect(('127.0.0.1', 9090))
 # 打印从服务器接收到的信息（WELCOME）
 print(s.recv(1024).decode())
 # 服务端向服务端发送数据
-s.sendall("yuanyuan".encode())
+s.sendall("lewy".encode())
 print(s.recv(1024).decode())
 
 s.send('exit'.encode())

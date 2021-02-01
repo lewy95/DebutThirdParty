@@ -15,7 +15,7 @@ print(s.recv(1).decode())  # 再次recv是产生阻塞，并且无法给服务�
 # 法二：设置超时时间，模拟非阻塞的场景，timeout后如果再次recv还获取不到数据则抛出异常
 # s.settimeout(2)
 # print(s.recv(1).decode())  # 再次recv是产生阻塞，会一直等待服务端发送来的数据包
-#s.sendall("yuanyuan".encode())
+#s.sendall("lewy".encode())
 
 # 服务端再次向服务端发送数据，在recv产生阻塞时，当时客户端是不能操作的，所以不能发送成功
 for data in ['yy', 'ym', 'ly', 'sy']:
